@@ -6,8 +6,10 @@ function App() {
   return (
     <>
       <Nav />
-      <div className="columns is-centered m-3">
-        <Outlet />
+      <div className="hero is-fullheight">
+        <div className="columns is-centered m-3">
+          <Outlet />
+        </div>
       </div>
       <Footer />
     </>
