@@ -6,7 +6,9 @@ function App() {
   return (
     <>
       <Nav />
-      <Outlet />
+      <div className="columns is-centered is-multiline mx-3">
+        <Outlet />
+      </div>
       <Footer />
     </>
   );
