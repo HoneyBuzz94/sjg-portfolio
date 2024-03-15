@@ -6,7 +6,7 @@ export default function Nav() {
     <Navbar
       links={[
         <Link key={1} className="navbar-item" to="/">
-          Home
+          About Me
         </Link>,
         <Link key={2} className="navbar-item" to="/portfolio">
           Portfolio

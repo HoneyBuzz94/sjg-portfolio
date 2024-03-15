@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <Nav />
-      <div className="columns is-centered is-multiline mx-3">
+      <div className="columns is-centered m-3">
         <Outlet />
       </div>
       <Footer />
