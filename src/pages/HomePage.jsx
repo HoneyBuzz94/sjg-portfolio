@@ -54,35 +54,6 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-
-      <div className="tile"></div>
-      <div className="tile is-parent is-vertical">
-        <a href="/portfolio">
-          <div className="tile is-child box" style={styles.tile}>
-            <p className="is-size-3 has-text-weight-semibold">
-              See my portfolio
-            </p>
-          </div>
-        </a>
-      </div>
-      <div className="tile is-parent is-vertical">
-        <a href="/contact">
-          <div className="tile is-child box" style={styles.tile}>
-            <p className="is-size-3 has-text-weight-semibold">
-              Contact me
-            </p>
-          </div>
-        </a>
-      </div>
-      <div className="tile is-parent is-vertical">
-        <a href="/resume">
-          <div className="tile is-child box" style={styles.tile}>
-            <p className="is-size-3 has-text-weight-semibold">
-              See my resume
-            </p>
-          </div>
-        </a>
-      </div>
     </div>
   );
 }
