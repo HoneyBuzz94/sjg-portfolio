@@ -30,11 +30,11 @@ export default function Contact() {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    
-    setSuccess('');
-    setName('');
-    setEmail('');
-    setMessage('');
+
+    setSuccess("");
+    setName("");
+    setEmail("");
+    setMessage("");
   };
 
   return (
@@ -67,7 +67,9 @@ export default function Contact() {
               <label className="label">Email</label>
               <div className="control">
                 <input
-                  className={`input ${email!='' && !validateEmail(email) ? 'is-danger' : ''}`}
+                  className={`input ${
+                    email != "" && !validateEmail(email) ? "is-danger" : ""
+                  }`}
                   name="email"
                   type="email"
                   placeholder="Email"
@@ -75,7 +77,13 @@ export default function Contact() {
                   value={email}
                   required
                 />
-                <p className={`help is-danger ${email!='' && !validateEmail(email) ? '' : 'is-hidden'}`}>This email is invalid</p>
+                <p
+                  className={`help is-danger ${
+                    email != "" && !validateEmail(email) ? "" : "is-hidden"
+                  }`}
+                >
+                  This email is invalid
+                </p>
               </div>
             </div>
           </div>
@@ -100,9 +108,15 @@ export default function Contact() {
           <div className="tile is-parent">
             <div className="tile is-child">
               <div className="control">
-                <button className={`button is-link ${success ? '' : 'is-hidden'}`}>Submit</button>
+                <button
+                  className={`button is-link ${success ? "" : "is-hidden"}`}
+                >
+                  Submit
+                </button>
               </div>
-              <p className={`has-text-success has-text-weight-bold ${success}`}>Your message was successfully submitted!</p>
+              <p className={`has-text-success has-text-weight-bold ${success}`}>
+                Your message was successfully submitted!
+              </p>
             </div>
           </div>
         </form>
