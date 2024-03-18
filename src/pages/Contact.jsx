@@ -75,7 +75,7 @@ export default function Contact() {
                   value={email}
                   required
                 />
-                <p class={`help is-danger ${email!='' && !validateEmail(email) ? '' : 'is-hidden'}`}>This email is invalid</p>
+                <p className={`help is-danger ${email!='' && !validateEmail(email) ? '' : 'is-hidden'}`}>This email is invalid</p>
               </div>
             </div>
           </div>

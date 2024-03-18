@@ -13,7 +13,7 @@ const styles = {
 
 export default function HomePage() {
   return (
-    <div className="tile is-ancestor is-10 is-vertical">
+    <div className="tile is-ancestor is-9 is-vertical">
       <div className="tile">
         <div className="tile is-parent is-4 is-vertical">
           <div

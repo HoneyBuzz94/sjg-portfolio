@@ -1,100 +1,165 @@
 const styles = {
-  img: {
-    borderRadius: 5,
-    marginTop: 15,
+  mainProjectLegend: {
+    backgroundColor: "#000000EE",
+    color: "white",
+    height: "40%",
+  },
+  mainProject: {
+    backgroundImage: "url(../../images/book_nook.png)",
+    backgroundPosition: "center",
+    minHeight: "50vh",
+  },
+  otherProjectLegend: {
+    backgroundColor: "#000000EE",
+    color: "white",
+    height: "80%",
+  },
+  blogmire: {
+    backgroundImage: "url(../../images/blogmire.png)",
+    backgroundPosition: "left top",
+    minHeight: "30vh",
+  },
+  thoughtCloud: {
+    backgroundImage: "url(../../images/thought_cloud.png)",
+    backgroundPosition: "left top",
+    minHeight: "30vh",
+  },
+  commerceElectronique: {
+    backgroundImage: "url(../../images/commerce_electronique.png)",
+    backgroundPosition: "left top",
+    minHeight: "30vh",
+  },
+  holidayPlaylist: {
+    backgroundImage: "url(../../images/playlist_generator.png)",
+    backgroundPosition: "left top",
+    minHeight: "30vh",
+  },
+  theWeatheredTraveler: {
+    backgroundImage: "url(../../images/the_weathered_traveler.png)",
+    backgroundPosition: "left top",
+    minHeight: "30vh",
   },
 };
 
 export default function Portfolio() {
   return (
-    <div className="tile is-ancestor is-10">
-      <div className="tile is-vertical is-8">
-        <div className="tile is-parent">
-          <a
-            className="tile is-child box has-background-danger-dark has-text-white"
-            href="https://github.com/HoneyBuzz94/book-nook"
-            target="_blank"
-          >
-            <p className="is-size-3">Book Nook</p>
-            <p>A neat and simple book journaling app.</p>
-            <figure className="image is-hidden-touch">
-              <img
-                src="../../images/book_nook.png"
-                alt="Book nook"
-                style={styles.img}
-              />
-            </figure>
-          </a>
-        </div>
-        <div className="tile">
-          <div className="tile is-parent">
+    <div className="tile is-ancestor is-8 is-vertical m-0">
+      <div className="tile box" style={styles.mainProject}>
+        <div className="box" style={styles.mainProjectLegend}>
+          <p className="is-size-3 has-text-weight-semibold">Book Nook</p>
+          <p>A neat and simple book journaling app.</p>
+          <br />
+          <div className="buttons">
             <a
-              className="tile is-child box has-background-primary-dark has-text-white"
-              href="https://github.com/HoneyBuzz94/blogmire"
+              className="button is-link"
+              href="https://github.com/HoneyBuzz94/book-nook"
               target="_blank"
             >
-              <p className="is-size-3">Blogmire</p>
-              <p>A blogging / social media platform.</p>
-              <figure className="image is-hidden-touch">
-                <img
-                  src="../../images/blogmire.png"
-                  alt="Book nook"
-                  style={styles.img}
-                />
-              </figure>
+              GitHub project
             </a>
-          </div>
-          <div className="tile is-parent is-vertical">
-            <a
-              className="tile is-child box has-background-warning-dark has-text-white"
-              href="https://github.com/HoneyBuzz94/employee-tracker-plus"
-              target="_blank"
-            >
-              <p className="is-size-3">Employee Tracker +</p>
-              <p>A backend employee management application.</p>
-            </a>
-            <a
-              className="tile is-child box has-background-link-dark has-text-white"
-              href="https://github.com/HoneyBuzz94/commerce-electronique"
-              target="_blank"
-            >
-              <p className="is-size-3">Commerce Electronique</p>
-              <p>A backend inventory management application.</p>
+            <a className="button is-link" href="https://book-nook-2024-1c3caea5765b.herokuapp.com" target="_blank">
+              Deployed application
             </a>
           </div>
         </div>
       </div>
-      <div className="tile is-parent is-vertical">
-        <a
-          className="tile is-child box has-background-info-dark has-text-white"
-          href="https://github.com/ruthiepina/Project-1"
-          target="_blank"
-        >
-          <p className="is-size-3">Holiday Playlister</p>
+
+      <div className="tile box" style={styles.blogmire}>
+        <div className="box" style={styles.otherProjectLegend}>
+          <p className="is-size-3 has-text-weight-semibold">Blogmire</p>
+          <p>A blogging / social media platform.</p>
+          <br />
+          <div className="buttons">
+            <a className="button is-link" href="https://github.com/HoneyBuzz94/blogmire?tab=readme-ov-file" target="_blank">
+              GitHub project
+            </a>
+            <a className="button is-link" href="https://blogmire-0db218320fbf.herokuapp.com/" target="_blank">
+              Deployed application
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className="tile box" style={styles.thoughtCloud}>
+        <div className="box" style={styles.otherProjectLegend}>
+          <p className="is-size-3 has-text-weight-semibold">
+            Thought cloud
+          </p>
+          <p>A backend social media app.</p>
+          <br />
+          <div className="buttons">
+            <a
+              className="button is-link"
+              href="https://github.com/HoneyBuzz94/thought-cloud"
+              target="_blank"
+            >
+              GitHub project
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className="tile box" style={styles.holidayPlaylist}>
+        <div className="box" style={styles.otherProjectLegend}>
+          <p className="is-size-3 has-text-weight-semibold">
+            Holiday playlist maker
+          </p>
           <p>A playlist generator powered by Spotify.</p>
-          <figure className="image is-hidden-touch">
-            <img
-              src="../../images/playlist_generator.png"
-              alt="Holiday playlist generator"
-              style={styles.img}
-            />
-          </figure>
-        </a>
-        <a
-          className="tile is-child box has-background-success-dark has-text-white"
-          href="https://github.com/HoneyBuzz94/the-weathered-traveler"
-          target="_blank"
-        >
-          <p className="is-size-3">The Weathered Traveler</p>
-          <p>A straightforward weather app.</p>
-          <figure className="image is-hidden-touch">
-            <img
-              src="../../images/the_weathered_traveler.png"
-              alt="Book nook"
-              style={styles.img}
-            />
-          </figure>
-        </a>
+          <br />
+          <div className="buttons">
+            <a
+              className="button is-link"
+              href="https://github.com/ruthiepina/Project-1"
+              target="_blank"
+            >
+              GitHub project
+            </a>
+            <a className="button is-link" href="https://ruthiepina.github.io/Project-1/" target="_blank">
+              Deployed application
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className="tile box" style={styles.theWeatheredTraveler}>
+        <div className="box" style={styles.otherProjectLegend}>
+          <p className="is-size-3 has-text-weight-semibold">
+            The weathered traveler
+          </p>
+          <p>A weather tracking app.</p>
+          <br />
+          <div className="buttons">
+            <a
+              className="button is-link"
+              href="https://github.com/HoneyBuzz94/the-weathered-traveler"
+              target="_blank"
+            >
+              GitHub project
+            </a>
+            <a className="button is-link" href="https://honeybuzz94.github.io/the-weathered-traveler/" target="_blank">
+              Deployed application
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className="tile box" style={styles.commerceElectronique}>
+        <div className="box" style={styles.otherProjectLegend}>
+          <p className="is-size-3 has-text-weight-semibold">
+            Commerce electronique
+          </p>
+          <p>A backend inventory management application.</p>
+          <br />
+          <div className="buttons">
+            <a
+              className="button is-link"
+              href="https://github.com/HoneyBuzz94/commerce-electronique"
+              target="_blank"
+            >
+              GitHub project
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
