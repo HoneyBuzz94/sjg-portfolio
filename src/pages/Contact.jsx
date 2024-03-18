@@ -38,7 +38,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="tile is-ancestor is-9 m-0">
+    <div className="tile is-ancestor is-8 m-0">
       <div className="tile is-vertical">
         <form
           className="tile is-parent is-vertical box form"
