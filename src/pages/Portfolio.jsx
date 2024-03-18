@@ -7,7 +7,7 @@ const styles = {
 
 export default function Portfolio() {
   return (
-    <div className="tile is-ancestor is-8">
+    <div className="tile is-ancestor is-10">
       <div className="tile is-vertical is-8">
         <div className="tile is-parent">
           <a

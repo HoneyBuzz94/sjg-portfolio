@@ -1,6 +1,6 @@
 export default function Nav({ links }) {
   return (
-    <nav className="navbar" role="navigation" aria-label="main navigation">
+    <nav className="navbar" role="navigation" aria-label="main navigation" style={{backgroundColor: '#F0DCCA'}}>
       <div className="navbar-brand">
         <a href="/">
           <img src="../../../images\HoneyBuzz94 Logo (small).png" width="100" />
