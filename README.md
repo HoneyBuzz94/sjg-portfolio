@@ -5,6 +5,7 @@ This is my current portfolio webpage. This page was designed to show potential e
 
 ## Usage
 My portfolio is live and can be visited by clicking on this link: [SJG Portfolio](https://helpful-tartufo-77b416.netlify.app/)
+![Deployed website](./images/site_screenshot.png)
 
 ## Credits
 The following resources and tutorials were used in creating this project:
