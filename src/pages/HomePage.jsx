@@ -1,3 +1,5 @@
+import profilePic from '../images/profile_pic.jpg';
+
 const styles = {
   tile: {
     backgroundColor: "#F0DCCA",
@@ -22,7 +24,7 @@ export default function HomePage() {
           >
             <div className="column" style={styles.column}>
               <img
-                src="../../images/profile_pic.jpg"
+                src={profilePic}
                 alt="Profile Picture"
                 style={styles.img}
               />
