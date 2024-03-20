@@ -6,12 +6,14 @@ function App() {
   return (
     <>
       <Nav />
-      <div className="hero is-fullheight">
+      <body className="hero is-fullheight">
         <div className="columns is-centered m-3">
           <Outlet />
         </div>
-      </div>
-      <Footer />
+      </body>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }

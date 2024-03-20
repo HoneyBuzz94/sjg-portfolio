@@ -1,4 +1,5 @@
 import { useState } from "react";
+import logo from '../../images/hb94_logo.png';
 
 export default function Nav({ links }) {
   const [isActive, setIsActive] = useState(false);
@@ -16,7 +17,7 @@ export default function Nav({ links }) {
     >
       <div className="navbar-brand">
         <a href="/">
-          <img src="../../../images\HoneyBuzz94 Logo (small).png" width="100" />
+          <img src={logo} width="100" />
         </a>
         <a
           role="button"

@@ -1,163 +1,224 @@
+import bookNook from "../images/book_nook.png";
+import blogmire from "../images/blogmire.png";
+import thoughtCloud from "../images/thought_cloud.png";
+import commerceElectronique from "../images/commerce_electronique.png";
+import playlistGenerator from "../images/playlist_generator.png";
+import theWeatheredTraveler from "../images/the_weathered_traveler.png";
+
 const styles = {
-  mainProjectLegend: {
-    backgroundColor: "#000000EE",
-    color: "white",
-    height: "40%",
+  tile: {
+    backgroundColor: "#F0DCCA",
   },
-  mainProject: {
-    backgroundImage: "url(../../images/book_nook.png)",
-    backgroundPosition: "center",
-    minHeight: "50vh",
+  img: {
+    borderRadius: 5,
+    filter: "grayscale(0%) contrast(100%)",
+    transition: "filter 0.3s ease",
   },
-  otherProjectLegend: {
-    backgroundColor: "#000000EE",
-    color: "white",
-    height: "80%",
-  },
-  blogmire: {
-    backgroundImage: "url(../../images/blogmire.png)",
-    backgroundPosition: "left top",
-    minHeight: "30vh",
-  },
-  thoughtCloud: {
-    backgroundImage: "url(../../images/thought_cloud.png)",
-    backgroundPosition: "left top",
-    minHeight: "30vh",
-  },
-  commerceElectronique: {
-    backgroundImage: "url(../../images/commerce_electronique.png)",
-    backgroundPosition: "left top",
-    minHeight: "30vh",
-  },
-  holidayPlaylist: {
-    backgroundImage: "url(../../images/playlist_generator.png)",
-    backgroundPosition: "left top",
-    minHeight: "30vh",
-  },
-  theWeatheredTraveler: {
-    backgroundImage: "url(../../images/the_weathered_traveler.png)",
-    backgroundPosition: "left top",
-    minHeight: "30vh",
+  imgHover: {
+    filter: "grayscale(100%) contrast(95%)",
   },
 };
 
 export default function Portfolio() {
+  const handleHover = (e) => {
+    if (e.target.classList.contains("project-image")) {
+      e.target.style.filter = styles.imgHover.filter;
+    }
+  };
+
+  const handleLeave = (e) => {
+    if (e.target.classList.contains("project-image")) {
+      e.target.style.filter = styles.img.filter;
+    }
+  };
+
   return (
-    <div className="tile is-ancestor is-8 is-vertical m-0">
-      <div className="tile box" style={styles.mainProject}>
-        <div className="box" style={styles.mainProjectLegend}>
-          <p className="is-size-3 has-text-weight-semibold">Book Nook</p>
-          <p>A neat and simple book journaling app.</p>
-          <br />
-          <div className="buttons">
+    <div className="tile is-ancestor is-8 is-vertical">
+      <div className="tile">
+        <div className="tile is-parent">
+          <div className="tile is-child box" style={styles.tile}>
             <a
-              className="button is-link"
-              href="https://github.com/HoneyBuzz94/book-nook"
+              href="https://book-nook-2024-1c3caea5765b.herokuapp.com"
               target="_blank"
             >
-              GitHub project
+              <img
+                className="project-image"
+                src={bookNook}
+                style={styles.img}
+                onMouseEnter={handleHover}
+                onMouseLeave={handleLeave}
+              />
             </a>
-            <a className="button is-link" href="https://book-nook-2024-1c3caea5765b.herokuapp.com" target="_blank">
-              Deployed application
+            <div className="columns is-vcentered">
+              <div className="column">
+                <p className="is-size-5 has-text-centered has-text-weight-semibold">
+                  Book Nook
+                </p>
+                <p className="has-text-centered">
+                  A neat and simple book journal.
+                </p>
+              </div>
+              <div className="column is-2 has-text-centered">
+                <a
+                  target="_blank"
+                  href="https://github.com/HoneyBuzz94/book-nook"
+                >
+                  <ion-icon name="logo-github" size="large"></ion-icon>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="tile is-parent">
+          <div className="tile is-child box" style={styles.tile}>
+            <a
+              href="https://blogmire-0db218320fbf.herokuapp.com"
+              target="_blank"
+            >
+              <img
+                className="project-image"
+                src={blogmire}
+                style={styles.img}
+                onMouseEnter={handleHover}
+                onMouseLeave={handleLeave}
+              />
             </a>
+            <div className="columns is-vcentered">
+              <div className="column">
+                <p className="is-size-5 has-text-centered has-text-weight-semibold">
+                  Blogmire
+                </p>
+                <p className="has-text-centered">A blogging platform.</p>
+              </div>
+              <div className="column is-2 has-text-centered">
+                <a
+                  target="_blank"
+                  href="https://github.com/HoneyBuzz94/blogmire?tab=readme-ov-file"
+                >
+                  <ion-icon name="logo-github" size="large"></ion-icon>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="tile is-parent">
+          <div className="tile is-child box" style={styles.tile}>
+            <img
+              src={thoughtCloud}
+              style={styles.img}
+              onMouseEnter={handleHover}
+              onMouseLeave={handleLeave}
+            />
+            <div className="columns is-vcentered">
+              <div className="column">
+                <p className="is-size-5 has-text-centered has-text-weight-semibold">
+                  Thought Cloud
+                </p>
+                <p className="has-text-centered">
+                  A backend social media framework.
+                </p>
+              </div>
+              <div className="column is-2 has-text-centered">
+                <a
+                  target="_blank"
+                  href="https://github.com/HoneyBuzz94/thought-cloud"
+                >
+                  <ion-icon name="logo-github" size="large"></ion-icon>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="tile box" style={styles.blogmire}>
-        <div className="box" style={styles.otherProjectLegend}>
-          <p className="is-size-3 has-text-weight-semibold">Blogmire</p>
-          <p>A blogging / social media platform.</p>
-          <br />
-          <div className="buttons">
-            <a className="button is-link" href="https://github.com/HoneyBuzz94/blogmire?tab=readme-ov-file" target="_blank">
-              GitHub project
-            </a>
-            <a className="button is-link" href="https://blogmire-0db218320fbf.herokuapp.com/" target="_blank">
-              Deployed application
-            </a>
+      <div className="tile">
+        <div className="tile is-parent">
+          <div className="tile is-child box" style={styles.tile}>
+            <img
+              src={commerceElectronique}
+              style={styles.img}
+              onMouseEnter={handleHover}
+              onMouseLeave={handleLeave}
+            />
+            <div className="columns is-vcentered">
+              <div className="column">
+                <p className="is-size-5 has-text-centered has-text-weight-semibold">
+                  Commerce Electronique
+                </p>
+                <p className="has-text-centered">
+                  A backend inventory management system.
+                </p>
+              </div>
+              <div className="column is-2 has-text-centered">
+                <a
+                  target="_blank"
+                  href="https://github.com/HoneyBuzz94/commerce-electronique"
+                >
+                  <ion-icon name="logo-github" size="large"></ion-icon>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div className="tile box" style={styles.thoughtCloud}>
-        <div className="box" style={styles.otherProjectLegend}>
-          <p className="is-size-3 has-text-weight-semibold">
-            Thought cloud
-          </p>
-          <p>A backend social media app.</p>
-          <br />
-          <div className="buttons">
-            <a
-              className="button is-link"
-              href="https://github.com/HoneyBuzz94/thought-cloud"
-              target="_blank"
-            >
-              GitHub project
+        <div className="tile is-parent">
+          <div className="tile is-child box" style={styles.tile}>
+            <a href="https://ruthiepina.github.io/Project-1/" target="_blank">
+              <img
+                className="project-image"
+                src={playlistGenerator}
+                style={styles.img}
+                onMouseEnter={handleHover}
+                onMouseLeave={handleLeave}
+              />
             </a>
+            <div className="columns is-vcentered">
+              <div className="column">
+                <p className="is-size-5 has-text-centered has-text-weight-semibold">
+                  Playlist Generator
+                </p>
+                <p className="has-text-centered">A holiday playlist creator</p>
+              </div>
+              <div className="column is-2 has-text-centered">
+                <a
+                  target="_blank"
+                  href="https://github.com/ruthiepina/Project-1"
+                >
+                  <ion-icon name="logo-github" size="large"></ion-icon>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div className="tile box" style={styles.holidayPlaylist}>
-        <div className="box" style={styles.otherProjectLegend}>
-          <p className="is-size-3 has-text-weight-semibold">
-            Holiday playlist maker
-          </p>
-          <p>A playlist generator powered by Spotify.</p>
-          <br />
-          <div className="buttons">
+        <div className="tile is-parent">
+          <div className="tile is-child box" style={styles.tile}>
             <a
-              className="button is-link"
-              href="https://github.com/ruthiepina/Project-1"
+              href="https://honeybuzz94.github.io/the-weathered-traveler/"
               target="_blank"
             >
-              GitHub project
+              <img
+                className="project-image"
+                src={theWeatheredTraveler}
+                style={styles.img}
+                onMouseEnter={handleHover}
+                onMouseLeave={handleLeave}
+              />
             </a>
-            <a className="button is-link" href="https://ruthiepina.github.io/Project-1/" target="_blank">
-              Deployed application
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div className="tile box" style={styles.theWeatheredTraveler}>
-        <div className="box" style={styles.otherProjectLegend}>
-          <p className="is-size-3 has-text-weight-semibold">
-            The weathered traveler
-          </p>
-          <p>A weather tracking app.</p>
-          <br />
-          <div className="buttons">
-            <a
-              className="button is-link"
-              href="https://github.com/HoneyBuzz94/the-weathered-traveler"
-              target="_blank"
-            >
-              GitHub project
-            </a>
-            <a className="button is-link" href="https://honeybuzz94.github.io/the-weathered-traveler/" target="_blank">
-              Deployed application
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div className="tile box" style={styles.commerceElectronique}>
-        <div className="box" style={styles.otherProjectLegend}>
-          <p className="is-size-3 has-text-weight-semibold">
-            Commerce electronique
-          </p>
-          <p>A backend inventory management application.</p>
-          <br />
-          <div className="buttons">
-            <a
-              className="button is-link"
-              href="https://github.com/HoneyBuzz94/commerce-electronique"
-              target="_blank"
-            >
-              GitHub project
-            </a>
+            <div className="columns is-vcentered">
+              <div className="column">
+                <p className="is-size-5 has-text-centered has-text-weight-semibold">
+                  The Weathered Traveler
+                </p>
+                <p className="has-text-centered">A weather application.</p>
+              </div>
+              <div className="column is-2 has-text-centered">
+                <a
+                  target="_blank"
+                  href="https://github.com/HoneyBuzz94/the-weathered-traveler"
+                >
+                  <ion-icon name="logo-github" size="large"></ion-icon>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
